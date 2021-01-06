@@ -1,25 +1,14 @@
-import './App.css';
-import axios from "axios";
-function getPost() {
-    axios.get("http://localhost:8080/test")
-        .then(response => {
-            console.log(response);
-        })
-        .catch(error => {
-            console.log(error);
-        });
-}
-function App() {
+import { Component }  from "react";
+import Router from "./common/router";
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-            {getPost()}
-        </div>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div className="App">
+                <Router/>
+            </div>
+        )
+    }
 }
 
 export default App;
