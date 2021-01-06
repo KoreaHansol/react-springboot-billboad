@@ -25,7 +25,7 @@ function Copyright() {
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="/">
-                Your Website
+                Kim HanSol
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -140,13 +140,13 @@ export default function Home( { children } ) {
                         <MenuIcon />
                     </IconButton>
                     <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-                        Dashboard
+                        연습용 게시판
                     </Typography>
-                    <IconButton color="inherit">
-                        <Badge badgeContent={4} color="secondary">
-                            <NotificationsIcon />
-                        </Badge>
-                    </IconButton>
+                    {/*<IconButton color="inherit">*/}
+                    {/*    <Badge badgeContent={4} color="secondary">*/}
+                    {/*        <NotificationsIcon />*/}
+                    {/*    </Badge>*/}
+                    {/*</IconButton>*/}
                 </Toolbar>
             </AppBar>
             <Drawer
