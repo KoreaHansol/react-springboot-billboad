@@ -16,7 +16,6 @@ public class TestController {
     @Autowired
     private TestService testService;
 
-    @CrossOrigin("*")
     @GetMapping("/test")
     @ResponseBody
     public List<Map<String, Object>> getEmployee() {

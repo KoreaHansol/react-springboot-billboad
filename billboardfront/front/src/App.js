@@ -2,7 +2,7 @@ import './App.css';
 import axios from "axios";
 function getPost() {
     axios.get("http://localhost:8080/test")
-        .then(response => {      // .then : 응답(상태코드200~300미만)성공시
+        .then(response => {
             console.log(response);
         })
         .catch(error => {
