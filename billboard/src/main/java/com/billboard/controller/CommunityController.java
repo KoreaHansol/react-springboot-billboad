@@ -32,7 +32,23 @@ public class CommunityController {
 
     @RequestMapping(value = "/Community/write", method = RequestMethod.POST)
     @ResponseBody
-    public void  InsertCommunity(@RequestBody CommunityForm form) {
+    public String  InsertCommunity(@RequestBody CommunityForm form) {
         communityService.InsertCommunity(form);
+        return "추가 완료";
+    }
+
+
+    @RequestMapping(value = "/Community/ult", method = RequestMethod.POST)
+    @ResponseBody
+    public String  UltCommunity(@RequestBody Community form) {
+        communityService.UltCommunity(form);
+        return "수정 완료";
+    }
+
+    @RequestMapping(value = "/Community/delete", method = RequestMethod.POST)
+    @ResponseBody
+    public String  deleteCommunity(@RequestBody Community form) {
+        communityService.deleteCommunity(form.getId());
+        return "삭제 완료";
     }
 }

@@ -18,4 +18,19 @@
 		title = #{title},
             body = #{body}
     </insert>
+
+    <update id="UltCommunity" parameterType="map">
+        UPDATE board
+        SET title = #{title},
+            body = #{body},
+            regData  = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteCommunity" parameterType="long">
+        DELETE FROM board
+        WHERE id =
+              #{id}
+    </delete>
+
 </mapper>

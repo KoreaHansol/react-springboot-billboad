@@ -5,6 +5,7 @@ import CommunityList from "../pages/community/CommunityList";
 import MainLayOut from "../layout/mainLayout"
 import Write from "../pages/common/write";
 import Detail from '../pages/common/detail';
+import Login from '../pages/common/Login';
 
 function Router() {
 
@@ -14,7 +15,7 @@ function Router() {
                 <BrowserRouter>
                     <div>
                         <Route exact path="/" render={() => <MainLayOut></MainLayOut>}/>
-                        <Route exact path="/Login" render={() => <MainLayOut></MainLayOut>}/>
+                        <Route exact path="/Login" render={() => <MainLayOut><Login/></MainLayOut>}/>
                         <Route exact path="/Community" render={() => <MainLayOut><CommunityList /></MainLayOut>}/>
                         <Route exact path="/Community/write" render={() => <MainLayOut><Write /></MainLayOut>}/>
                         <Route path="/Community/detail/:id" render={() => <MainLayOut><Detail /></MainLayOut>}/>

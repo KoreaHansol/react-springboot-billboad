@@ -10,4 +10,6 @@ public interface CommunityService {
     List<Map<String, Object>> getList();
     Community getDetail(Long id);
     void InsertCommunity(CommunityForm form);
+    void UltCommunity(Community form);
+    void deleteCommunity(Long id);
 }

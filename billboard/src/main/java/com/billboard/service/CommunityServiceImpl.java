@@ -28,4 +28,14 @@ public class CommunityServiceImpl implements CommunityService {
     public void InsertCommunity(CommunityForm form) {
         communityMapper.InsertCommunity(form);
     }
+
+    @Override
+    public void UltCommunity(Community form) {
+        communityMapper.UltCommunity(form);
+    }
+
+    @Override
+    public void deleteCommunity(Long id) {
+        communityMapper.deleteCommunity(id);
+    }
 }

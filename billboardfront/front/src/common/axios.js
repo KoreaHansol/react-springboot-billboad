@@ -18,5 +18,5 @@ export function post(path, data) {
                 method: 'post',
                 url: path,
                 data: data,
-        });
+        })
 }
