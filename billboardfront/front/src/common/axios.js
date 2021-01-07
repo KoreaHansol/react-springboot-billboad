@@ -12,3 +12,11 @@ axios.defaults.baseURL = baseURL;
 export function get(path) {
         return axios.get(path).then(response => response.data);
 }
+
+export function post(path, data) {
+        axios({
+                method: 'post',
+                url: path,
+                data: data,
+        });
+}

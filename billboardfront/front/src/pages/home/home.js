@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MainLayOut from '../layout/mainLayout'
+import MainLayOut from '../../layout/mainLayout'
 class Home extends Component {
     render() {
         return (

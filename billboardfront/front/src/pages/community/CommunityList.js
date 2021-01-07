@@ -1,11 +1,13 @@
-import { Component }  from "react";
-import { get } from "../common/axios";
+import React, { Component }  from "react";
+import { get } from "../../common/axios";
+import { Button } from "@material-ui/core";
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Title from './Title';
+import Title from '../../component/Title';
+import { Link } from 'react-router-dom';
 
 class CommunityList extends Component {
     constructor(props) {
@@ -15,7 +17,7 @@ class CommunityList extends Component {
         }
     }
     componentDidMount() {
-        get("/test")
+        get("/Community")
         .then(data => {
             this.setState({
                 list: data
@@ -38,15 +40,26 @@ class CommunityList extends Component {
                     </TableHead>
                     <TableBody>
                         {this.state.list.map((row) => (
-                            <TableRow key={row.id}>
-                                <TableCell>{row.id}</TableCell>
-                                <TableCell>{row.title}</TableCell>
-                                <TableCell align="right">{row.regData}</TableCell>
-                            </TableRow>
+                                <TableRow key={row.id}>
+                                        <TableCell>{row.id}</TableCell>
+                                        <TableCell>
+                                            <Link to={`/Community/detail/${row.id}`} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                                                <div>{row.title}</div>
+                                            </Link>
+                                        </TableCell>
+                                        <TableCell align="right">{row.regData}</TableCell>
+                                </TableRow>
+                           
                         ))}
                     </TableBody>
                 </Table>
 
+
+                <Link to="/Community/write"  style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                    <Button variant="contained" color="primary" style={{marginTop:"20px"}}>
+                        글쓰기
+                    </Button>
+                </Link>
             </div>
         )
     }

@@ -1,5 +1,5 @@
 import { Component }  from "react";
-import { get } from "../common/axios";
+import { get } from "../../common/axios";
 
 class Community extends Component {
     constructor(props) {

@@ -168,23 +168,11 @@ export default function Home( { children } ) {
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
-                <Container maxWidth="lg" className={classes.container}>
+                <Container maxWidth="lg" className={classes.container} style={{marginLeft:"30px"}}>
                     <Grid container spacing={3}>
                         {/* Chart */}
-                        <Grid item xs={12} md={8} lg={9}>
+                        <Grid item xs={12} md={8} lg={12}>
                             {children}
-                        </Grid>
-                        {/* Recent Deposits */}
-                        <Grid item xs={12} md={4} lg={3}>
-                            {/*<Paper className={fixedHeightPaper}>*/}
-                            {/*    <Deposits />*/}
-                            {/*</Paper>*/}
-                        </Grid>
-                        {/* Recent Orders */}
-                        <Grid item xs={12}>
-                            {/*<Paper className={classes.paper}>*/}
-                            {/*    <Orders />*/}
-                            {/*</Paper>*/}
                         </Grid>
                     </Grid>
                     <Box pt={4}>
