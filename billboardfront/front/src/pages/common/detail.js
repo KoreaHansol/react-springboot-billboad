@@ -80,7 +80,6 @@ class Detail extends Component {
         })
 
         if (e.target.name === "ultcomple" && this.state.callbackForm) {
-            console.log("수정완료", this.state.callbackForm)
             if( this.state.callbackForm.title <= 0 || this.state.callbackForm.body <= 0) {
                 return;
             }
@@ -98,7 +97,6 @@ class Detail extends Component {
 
 
         if(e.target.name === "delete") {
-            console.log(this.state.detail.id)
             axios({
                 method: 'post',
                 url: "Community/delete",
@@ -152,7 +150,6 @@ class Detail extends Component {
     render() {
         const { id, title, body, regData } = this.state.detail
         const classes = this.useStyles;
-        console.log("this", this.state.callbackForm)
         return (
             <div>
                  

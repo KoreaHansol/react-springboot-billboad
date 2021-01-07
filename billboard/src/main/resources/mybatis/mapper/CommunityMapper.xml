@@ -11,8 +11,10 @@
         SELECT * FROM board WHERE id = #{id};
     </select>
 
+
+
     <insert id="InsertCommunity" parameterType="map"
-            keyProperty="form">
+            keyProperty="id"  useGeneratedKeys="true">
         INSERT INTO board
         SET regData  = NOW(),
 		title = #{title},

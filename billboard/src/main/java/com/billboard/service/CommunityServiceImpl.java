@@ -25,8 +25,8 @@ public class CommunityServiceImpl implements CommunityService {
     }
 
     @Override
-    public void InsertCommunity(CommunityForm form) {
-        communityMapper.InsertCommunity(form);
+    public Integer InsertCommunity(CommunityForm form) {
+        return communityMapper.InsertCommunity(form);
     }
 
     @Override

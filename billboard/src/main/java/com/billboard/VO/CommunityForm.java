@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class CommunityForm {
+    private Integer id;
     private String title;
     private String body;
 }

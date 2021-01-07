@@ -176,7 +176,6 @@ export default function Home( { children } ) {
                         </Grid>
                     </Grid>
                     <Box pt={4}>
-                        <Copyright />
                     </Box>
                 </Container>
             </main>
